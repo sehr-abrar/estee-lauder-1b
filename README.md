@@ -4,10 +4,8 @@ This project analyzes the causal impact of surprise gifts on customer spending u
 
 ## File / Folder Breakdown
 
-- `data/` — raw and processed datasets  
-- `notebooks/` — Jupyter / Colab notebooks for EDA, modeling, and analysis  
-- `scripts/` — optional Python scripts for modular code  
-- `figures/` — visualizations and plots generated from notebooks  
-- `presentations/` — slides or reports summarizing findings
+- `data/` — Raw and processed datasets.  
+- `notebooks/` — Jupyter / Colab notebooks for EDA, modeling, and analysis.   
+- `presentations/` — Slides or reports summarizing findings.
 
 **Note:** Project is in progress.

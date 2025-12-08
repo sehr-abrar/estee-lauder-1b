@@ -8,7 +8,7 @@
 |------------------|---------------|--------------------------------------------------------------------------|
 | [Name]           | @[handle]     | [Contribution description]                                               |
 | [Name]           | @[handle]     | [Contribution description]                                               |
-| [Name]           | @[handle]     | [Contribution description]                                               |
+| Nidhi Parvathala | @nidhiparvathala5 | Pre-experiment, MLRATE, Experiment data analysis      |
 | Sandy Wu         | @sandywu198   | MLRATE implementation, experiment data analysis, power analysis          |
 
 ---

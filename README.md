@@ -10,6 +10,7 @@
 | Ava Leung        | @Ava-Leung    | Pre-experiment data analysis, power analysis, presentations              |
 | Nidhi Parvathala | @nidhiparvathala5 | Pre-experiment, MLRATE, Experiment data analysis      |
 | Sandy Wu         | @sandywu198   | MLRATE implementation, experiment data analysis, power analysis          |
+| Sehr Abrar       | @sehr_abrar   | Power analysis, estimating standard ATE, MLRATE implementation           | 
 
 ---
 

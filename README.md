@@ -108,6 +108,15 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 
 ---
 
+###Requirements.txt
+- pandas
+- numpy
+- seaborn
+- matplotlib
+- statsmodels
+- scikit-learn
+
+
 ## 📈 **Results & Key Findings**
 
 ### Performance Metrics

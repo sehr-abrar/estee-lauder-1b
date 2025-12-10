@@ -44,6 +44,13 @@
    ```bash
    pip install -r requirements.txt
    ```
+   - These are some of the dependencies used:
+   - pandas
+   - numpy
+   - seaborn
+   - matplotlib
+   - statsmodels
+   - scikit-learn
 
 3. **Access the datasets**
    - Datasets are located in the `data/` folder:
@@ -107,14 +114,6 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 - `power_analysis.ipynb` — Power calculations and sample size determination
 
 ---
-
-###Requirements.txt
-- pandas
-- numpy
-- seaborn
-- matplotlib
-- statsmodels
-- scikit-learn
 
 
 ## 📈 **Results & Key Findings**

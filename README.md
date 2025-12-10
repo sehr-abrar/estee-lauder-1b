@@ -12,6 +12,7 @@
 | Sandy Wu         | @sandywu198   | MLRATE implementation, experiment data analysis, power analysis          |
 | Sehr Abrar       | @sehr_abrar   | Power analysis, estimating standard ATE, MLRATE implementation           | 
 | Xiaoyan Li       | @FreshTaurus   | EDA on Experiment Data,MLRATE implementation,presentations,           |
+| Lydia Aubourg    | @lydaub  | EDA on pre-experiment and experiment data, Estimating Standard ATE, Presentations|
 
 ---
 

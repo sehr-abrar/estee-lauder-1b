@@ -95,15 +95,21 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 - **Recency Matters**: Customers who purchased more recently tend to be more valuable, while inactive customers present re-engagement opportunities.
 
 **Distribution of Numeric Features**
+<br>
 <img src="images/numeric_distributions.png" width="600">
+<br>
 *Histograms of AOV, days since last purchase, tenure, and revenue show skewed distributions with long tails. Mean and median lines highlight the presence of high-value customers.*
 
 **AOV (t-1) vs Revenue (t)**
+<br>
 <img src="images/aov_vs_revenue.png" width="600">
+<br>
 *Higher past average order value is strongly associated with higher current revenue, indicating AOV is a key predictive feature.*
 
 **Revenue by Loyalty Membership**
+<br>
 <img src="images/revenue_by_loyalty.png" width="600">
+<br>
 *Loyalty members consistently generate higher revenue than non-members, with a higher median and upper quartile.*
 
 
@@ -118,15 +124,21 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 - **Heterogeneous Effects by Loyalty Status**: Loyalty members generate substantially higher revenue overall, and the treatment effect appears slightly stronger among loyalty members compared to non-members.
 
 **Revenue Distribution by Treatment Assignment**  
+<br>
 <img src="images/revenue_treatment_vs_control.png" width="600">  
+<br>
 *The treatment group shows a modest rightward shift in revenue compared to control, indicating a positive treatment effect.*
 
 **Covariate Balance Diagnostics**  
+<br>
 <img src="images/covariate_balance.png" width="600">  
+<br>
 *Standardized mean differences near zero confirm strong balance between treatment and control groups.*
 
 **Revenue by Loyalty Membership × Assignment**  
+<br>
 <img src="images/revenue_loyalty_treatment.png" width="600">  
+<br>
 *Loyalty members generate higher revenue overall, with a slightly stronger treatment effect among members.*
 
 ### Notebooks
@@ -169,37 +181,43 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 - **Recommendations for gift strategy optimization:** Focus gifts on loyalty members and high-AOV customers to maximize incremental revenue. Consider targeting recently active customers for higher effectiveness, as recency correlates with spending.
 
 **Standardized Revenue vs. Model Residuals**  
+<br>
 <img src="images/revenue_vs_residuals.png" width="600">  
+<br>
 *The blue curve shows the distribution of standardized revenue, which has high variance due to both natural variation and random noise. The orange curve shows the residuals from the predictive model, with much smaller variance, representing only unexplained noise. This variance reduction explains why MLRATE requires fewer samples than a standard t-test to detect the same effect size.*
 
 **Estimated Treatment Effect on Revenue**  
+<br>
 <img src="images/ols_treatment_effect.png" width="500">  
+<br>
 *The OLS regression estimates an average treatment effect (ATE) of \$5.10, with a 95% confidence interval of [\$3.84, \$6.36]. The effect is highly significant (p < 0.001), indicating that sending a gift increases revenue. Standard errors are heteroscedasticity-robust (HC0).*
 
 **MLRATE Estimated Treatment Effect on Revenue**  
+<br>
 <img src="images/mlrate_treatment_effect.png" width="600">  
+<br>
 *Using MLRATE with covariate adjustment, the estimated average treatment effect (ATE) is \$5.32, with a 95% confidence interval of [\$4.59, \$6.05]. The effect is highly significant (p < 0.001). By leveraging residual variance from the model, MLRATE achieves greater precision compared to a standard t-test, reducing the required sample size while maintaining s*
-
-
-### Visualizations
-- Treatment effect plots
-- Covariate balance checks
-- Distribution of outcomes by treatment group
-- Power analysis curves
 
 ---
 
-## 🚀 **Next Steps**
+## **Discussion & Reflection**
+
+### Key Takeaways
+- **What worked**: The MLRATE model effectively reduced residual variance, allowing for more precise ATE estimation with fewer samples. Standardized revenue distributions and treatment assignment checks confirmed robust experimental design. Treatment effects were more pronounced in high-value and loyalty customers, suggesting meaningful impact for targeted campaigns.
+
+- **What didn’t work / Limitations**: Some covariates had limited explanatory power, and interaction effects (e.g., T × g_hat) were small or insignificant. Short-term revenue impact was measurable, but longer-term effects on retention or customer lifetime value remain unassessed. Data sparsity in certain segments limited subgroup analyses.
+
+- **Why**: Variance reduction via model residuals explains the stronger statistical power of MLRATE. Limited heterogeneity in baseline covariates and short observation windows constrained the ability to detect differential treatment effects across customer segments.
 
 ### Potential Improvements
-- Explore heterogeneous treatment effects across different customer segments (e.g., by purchase history, demographics)
-- Implement additional machine learning models for treatment effect estimation (e.g., causal forests, meta-learners)
-- Conduct sensitivity analyses to assess robustness of findings
+- Explore heterogeneous treatment effects across different customer segments (e.g., by purchase history, demographics)  
+- Implement additional machine learning models for treatment effect estimation (e.g., causal forests, meta-learners)  
+- Conduct sensitivity analyses to assess robustness of findings  
 - Develop a recommendation system for personalized gift strategies
 
 ### With More Resources
-- Analyze longer-term effects on customer lifetime value and retention
-- Incorporate additional data sources (e.g., website behavior, customer satisfaction surveys)
+- Analyze longer-term effects on customer lifetime value and retention  
+- Incorporate additional data sources (e.g., website behavior, customer satisfaction surveys)  
 - Build a real-time decision system for gift allocation
 
 ---

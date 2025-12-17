@@ -93,7 +93,6 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 - **Tenure Is Weakly Related to Revenue**: Customer tenure alone does not strongly predict revenue; long-term customers can still be low-value or inactive.
 - **Loyalty Members Generate More Revenue**: Loyalty program members have substantially higher median and average revenue than non-members, indicating higher customer value.
 - **Recency Matters**: Customers who purchased more recently tend to be more valuable, while inactive customers present re-engagement opportunities.
-### Annotated Visualizations
 
 **Distribution of Numeric Features**
 <img src="images/numeric_distributions.png" width="600">
@@ -160,14 +159,27 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 ## 📈 **Results & Key Findings**
 
 ### Performance Metrics
-- [Treatment effect estimates to be filled]
-- [Confidence intervals and statistical significance to be filled]
-- [Comparison of standard vs. ML-adjusted estimates to be filled]
+- **Treatment effect estimates:** Treatment group had an average revenue of 123.05 vs. 117.95 in control, a difference of +5.1 units.
+- **Confidence intervals and statistical significance:** Welch's t-test shows t-statistic = 7.9146, p-value < 0.001 → statistically significant difference.
+- **Comparison of standard vs. ML-adjusted estimates:** Standard t-test power analysis requires 8,801 samples per group; MLRATE-adjusted analysis reduces this to 2,778 per group due to variance explained by prior customer behavior.
 
 ### Key Insights
-- [Impact of surprise gifts on customer spending to be filled]
-- [Heterogeneous treatment effects across customer segments to be filled]
-- [Recommendations for gift strategy optimization to be filled]
+- **Impact of surprise gifts on customer spending:** Treatment resulted in a modest increase in revenue (+5 units), indicating that small interventions can positively influence spending.
+- **Heterogeneous treatment effects across customer segments:** Effect stronger among loyalty members, with higher spending and more variance in revenue. Non-members showed minimal impact. High-AOV customers also maintained higher revenue regardless of treatment.
+- **Recommendations for gift strategy optimization:** Focus gifts on loyalty members and high-AOV customers to maximize incremental revenue. Consider targeting recently active customers for higher effectiveness, as recency correlates with spending.
+
+**Standardized Revenue vs. Model Residuals**  
+<img src="images/revenue_vs_residuals.png" width="600">  
+*The blue curve shows the distribution of standardized revenue, which has high variance due to both natural variation and random noise. The orange curve shows the residuals from the predictive model, with much smaller variance, representing only unexplained noise. This variance reduction explains why MLRATE requires fewer samples than a standard t-test to detect the same effect size.*
+
+**Estimated Treatment Effect on Revenue**  
+<img src="images/ols_treatment_effect.png" width="600">  
+*The OLS regression estimates an average treatment effect (ATE) of \$5.10, with a 95% confidence interval of [\$3.84, \$6.36]. The effect is highly significant (p < 0.001), indicating that sending a gift increases revenue. Standard errors are heteroscedasticity-robust (HC0).*
+
+**MLRATE Estimated Treatment Effect on Revenue**  
+<img src="images/mlrate_treatment_effect.png" width="600">  
+*Using MLRATE with covariate adjustment, the estimated average treatment effect (ATE) is \$5.32, with a 95% confidence interval of [\$4.59, \$6.05]. The effect is highly significant (p < 0.001). By leveraging residual variance from the model, MLRATE achieves greater precision compared to a standard t-test, reducing the required sample size while maintaining s*
+
 
 ### Visualizations
 - Treatment effect plots

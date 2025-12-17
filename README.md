@@ -86,8 +86,29 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 - Analyzed customer demographics, purchasing patterns, and treatment group distributions
 - Identified key covariates and potential confounders for treatment effect estimation
 
-### Key Insights
-- [To be filled based on EDA findings]
+## EDA Findings
+### Pre-Experiment Data
+- **Spending Is Skewed**: Most customers have low or near-zero past AOV, while a small group of high spenders drives a disproportionate share of revenue.
+- **Past AOV Predicts Revenue**: Higher average order value in the previous period is strongly associated with higher current revenue, making AOV a key predictive feature.
+- **Tenure Is Weakly Related to Revenue**: Customer tenure alone does not strongly predict revenue; long-term customers can still be low-value or inactive.
+- **Loyalty Members Generate More Revenue**: Loyalty program members have substantially higher median and average revenue than non-members, indicating higher customer value.
+- **Recency Matters**: Customers who purchased more recently tend to be more valuable, while inactive customers present re-engagement opportunities.
+### Annotated Visualizations
+
+**Distribution of Numeric Features**
+<img src="images/numeric_distributions.png" width="600">
+*Histograms of AOV, days since last purchase, tenure, and revenue show skewed distributions with long tails. Mean and median lines highlight the presence of high-value customers.*
+
+**AOV (t-1) vs Revenue (t)**
+<img src="images/aov_vs_revenue.png" width="600">
+*Higher past average order value is strongly associated with higher current revenue, indicating AOV is a key predictive feature.*
+
+**Revenue by Loyalty Membership**
+<img src="images/revenue_by_loyalty.png" width="600">
+*Loyalty members consistently generate higher revenue than non-members, with a higher median and upper quartile.*
+
+
+### EDA Findings (Experiment Data)
 
 ### Notebooks
 - `EDA_pre_experiment.ipynb` — Analysis of pre-experiment data

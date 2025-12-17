@@ -173,7 +173,7 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 *The blue curve shows the distribution of standardized revenue, which has high variance due to both natural variation and random noise. The orange curve shows the residuals from the predictive model, with much smaller variance, representing only unexplained noise. This variance reduction explains why MLRATE requires fewer samples than a standard t-test to detect the same effect size.*
 
 **Estimated Treatment Effect on Revenue**  
-<img src="images/ols_treatment_effect.png" width="600">  
+<img src="images/ols_treatment_effect.png" width="500">  
 *The OLS regression estimates an average treatment effect (ATE) of \$5.10, with a 95% confidence interval of [\$3.84, \$6.36]. The effect is highly significant (p < 0.001), indicating that sending a gift increases revenue. Standard errors are heteroscedasticity-robust (HC0).*
 
 **MLRATE Estimated Treatment Effect on Revenue**  

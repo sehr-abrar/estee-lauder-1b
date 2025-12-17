@@ -107,6 +107,18 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 <img src="images/revenue_by_loyalty.png" width="600">
 *Loyalty members consistently generate higher revenue than non-members, with a higher median and upper quartile.*
 
+**Revenue Distribution by Treatment Assignment**  
+<img src="images/revenue_treatment_vs_control.png" width="600">  
+*The treatment group shows a modest rightward shift in revenue compared to control, indicating a positive treatment effect.*
+
+**Covariate Balance Diagnostics**  
+<img src="images/covariate_balance.png" width="600">  
+*Standardized mean differences near zero confirm strong balance between treatment and control groups.*
+
+**Revenue by Loyalty Membership × Assignment**  
+<img src="images/revenue_loyalty_treatment.png" width="600">  
+*Loyalty members generate higher revenue overall, with a slightly stronger treatment effect among members.*
+
 
 ### EDA Findings (Experiment Data)
 - **Data Quality & Integrity**: The experiment dataset contains 5,556 observations with no missing values or duplicates. All variables have appropriate data types, confirming the dataset is clean and suitable for analysis.

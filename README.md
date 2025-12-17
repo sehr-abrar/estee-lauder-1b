@@ -109,6 +109,14 @@ This project is part of the **Break Through Tech AI Program** in collaboration w
 
 
 ### EDA Findings (Experiment Data)
+- **Data Quality & Integrity**: The experiment dataset contains 5,556 observations with no missing values or duplicates. All variables have appropriate data types, confirming the dataset is clean and suitable for analysis.
+- **Numeric Distributions Are Right-Skewed**: Revenue, AOV, tenure, and recency exhibit right-skewed distributions with long tails. Most customers cluster at lower values, while a small group of high-value customers drives higher means.
+- **Outliers Reflect Real Customer Behavior**: IQR-based outlier analysis shows that outliers are primarily high-spending, long-tenured, or infrequently purchasing customers. These points represent valid behavior and were retained for analysis.
+- **Successful Randomization (Covariate Balance)**: Treatment and control groups are well balanced across all pre-treatment covariates (AOV, recency, tenure, loyalty), with standardized mean differences below 0.03 and non-significant p-values. This confirms valid random assignment.
+- **Positive Treatment Effect on Revenue**: Visual and statistical comparisons show that the treatment group has higher average revenue than the control group. A Welch’s t-test confirms this difference is statistically significant (p < 0.001).
+- **Treatment Effects Are Modest but Consistent**: Revenue distributions for treatment and control overlap substantially, indicating a modest effect size despite statistical significance.
+- **Revenue Drivers Remain Consistent Across Groups**: Revenue increases with past AOV and decreases with time since last purchase for both groups, suggesting the treatment did not fundamentally alter customer spending patterns.
+- **Heterogeneous Effects by Loyalty Status**: Loyalty members generate substantially higher revenue overall, and the treatment effect appears slightly stronger among loyalty members compared to non-members.
 
 ### Notebooks
 - `EDA_pre_experiment.ipynb` — Analysis of pre-experiment data
